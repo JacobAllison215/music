@@ -1,11 +1,11 @@
 /*
   Author: Jacob Allison
   File Name: styles.css
-  Date: 02/09/2022
+  Date: 03/16/2022
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, img, h1, ul {
+body, header, nav, main, footer, img, h1, ul, section, aside, figure, figcaption{
   margin: 0;
   padding: 0;
   border: 0;
@@ -17,10 +17,42 @@ img {
   display: block;
 }
 
+/* Style rule for box sizing applies to all elements */
+* {
+  box-sizing: border-box;
+}
 /* Style rules for mobile viewport */
 
 .tab-desk {
   display: none;
+}
+
+aside {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #373684;
+  text-shadow: 3px 3px 10px #8280cb;
+}
+
+figure {
+  position: relative;
+  max-width: 275px;
+  margin: 2% auto;
+  border: 8px solid #373684;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(55, 54, 132, 0.7);
+  color: #fff;
+  width: 100%;
+  padding: 5% 0;
+  text-align: center;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 /* Style rules for header content */
@@ -173,6 +205,16 @@ footer a {
     width: 500px;
     height: 450px;
   }
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+
+  aside {
+    grid-column: 1 / span 2;
+  }
  }
 /* Media Query for Desktop Viewport */
 @media screen and (min-width: 769px) {
@@ -192,13 +234,27 @@ footer a {
   #info ul {
     margin-left: 5%;
   }
+
   main h3 {
     font-size: 1.5em;
   }
+
   #piano, #guitar, #violin {
     width: 29%;
     float: left;
     margin: 0% 2%;
+  }
+
+  .grid {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  figcaption {
+    font-size: 16px;
+  }
+
+  aside {
+    grid-column: 1 / span 4;
   }
 }
 
