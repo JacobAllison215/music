@@ -18,20 +18,24 @@ Date: 03/16/2022
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 <link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
+<script src="scripts/script.js"></script>
 </head>
 <body>
 <header>
   <h1><span class="tab-desk">&#9836;</span> Strike a Chord <span class="tab-desk">&#9836;</span></h1>
 </header>
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li> 
-    <li><a href="lessons.html">Lessons</a></li> 
-    <li><a href="instructors.html">Instructors</a></li> 
-    <li><a href="rentals.html">Rentals</a></li> 
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+<nav class="mobile-nav" class="tab-desk">
+        <div id="menu-links">
+            <a href="index.html">Home</a>
+            <a href="lessons.html">Lessons</a>
+            <a href="instructors.html">Instructors</a>
+            <a href="rentals.html">Rentals</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <a class="menu-icon" onclick="hamburger()">
+            <div>&#9776;</div>
+        </a>
+    </nav>
 
 <!-- Hero Image -->
 <div id="hero" class="tab-desk">
